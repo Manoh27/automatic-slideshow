@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Slideshow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        html{
+            background-color: black;
+        }
+        .group{
+            display: inline-block;
+        }
+        h2{
+            color: wheat;
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            /* transform: translate(350px,10px); */
+            margin: 30px;
+        }
+        .group2{
+            display: inline-block;
+        }
+        .mySlides{
+            display: none;
+        }
+        .mySlides2{
+            display: none;
+        }
+        .mySlides3{
+            display: none;
+        }
+        .myslide{
+            display: none;
+        }
+        .myslide2{
+            display: none;
+        }
+        .myslide3{
+            display: none;
+        }
+        img{
+            height: 33vh;
+            width: 32vw;
+        }
+        p{
+            color: wheat;
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Automatic Slideshow</h2>
+    <div class="group container1">
+        <img src="./pictures/image1.avif" alt="Image Not Found" class="mySlides">
+        <img src="./pictures/image2.avif" alt="Image Not Found" class="mySlides">
+        <img src="./pictures/image3.avif" alt="Image Not Found" class="mySlides">
+        <img src="./pictures/image4.avif" alt="Image Not Found" class="mySlides">
+    </div>
+    <div class="group container2">
+        <img src="./grid2/image1.avif" alt="Image Not Found" class="mySlides2">
+        <img src="./grid2/image2.avif" alt="Image Not Found" class="mySlides2">
+        <img src="./grid2/image3.avif" alt="Image Not Found" class="mySlides2">
+        <img src="./grid2/image4.avif" alt="Image Not Found" class="mySlides2">
+    </div>
+    <div class="group container3">
+        <img src="./grid3/image1.avif" alt="Image Not Found" class="mySlides3">
+        <img src="./grid3/image2.avif" alt="Image Not Found" class="mySlides3">
+        <img src="./grid3/image3.avif" alt="Image Not Found" class="mySlides3">
+        <img src="./grid3/image4.avif" alt="Image Not Found" class="mySlides3">
+    </div>
+    <div class="group2 crate">
+        <img src="./grid4/image1.avif" alt="Image Not Found" class="myslide">
+        <img src="./grid4/image2.avif" alt="Image Not Found" class="myslide">
+        <img src="./grid4/image3.avif" alt="Image Not Found" class="myslide">
+        <img src="./grid4/image4.avif" alt="Image Not Found" class="myslide">
+    </div>
+    <div class="group2 crate2">
+        <img src="./grid5/image1.avif" alt="Image Not Found" class="myslide2">
+        <img src="./grid5/image2.avif" alt="Image Not Found" class="myslide2">
+        <img src="./grid5/image3.avif" alt="Image Not Found" class="myslide2">
+        <img src="./grid5/image4.avif" alt="Image Not Found" class="myslide2">
+    </div>
+    <div class="group2 crate3">
+        <img src="./grid6/image1.avif" alt="Image Not Found" class="myslide3">
+        <img src="./grid6/image2.avif" alt="Image Not Found" class="myslide3">
+        <img src="./grid6/image3.avif" alt="Image Not Found" class="myslide3">
+        <img src="./grid6/image4.avif" alt="Image Not Found" class="myslide3">
+    </div>
+    <p>This Project contains multiple slideshows, working in an automatic manner. The slides move at different time intervals in automatically.</p>
+    <script>
+        var slideIndex = 0
+        carousel()
+        function carousel(){
+            var i
+            var x = document.getElementsByClassName("mySlides")
+            for(i=0;i<x.length;i++){
+                x[i].style.display = "none"
+            }
+            slideIndex++
+            if(slideIndex>x.length) {slideIndex=1}
+            x[slideIndex-1].style.display = "block"
+            setTimeout(carousel,1000)
+        }
+        var slideIndex2 = 0
+        carousel2()
+        function carousel2(){
+            var j
+            var y = document.getElementsByClassName("mySlides2")
+            for(j=0;j<y.length;j++){
+                y[j].style.display = "none"
+            }
+            slideIndex2++
+            if(slideIndex2>y.length) {slideIndex2=1}
+            y[slideIndex2 - 1].style.display = "block"
+            setTimeout(carousel2,2000)
+        }
+        var slideIndex3 = 0
+        carousel3()
+        function carousel3(){
+            var k
+            var z = document.getElementsByClassName("mySlides3")
+            for(k=0;k<z.length;k++){
+                z[k].style.display = "none"
+            }
+            slideIndex3++
+            if(slideIndex3>z.length) {slideIndex3=1}
+            z[slideIndex3 - 1].style.display = "block"
+            setTimeout(carousel3,3000)
+        }
+        var slideIndex4 = 0
+        carousel4()
+        function carousel4(){
+            var i
+            var a = document.getElementsByClassName("myslide")
+            for(i=0;i<a.length;i++){
+                a[i].style.display = "none"
+            }
+            slideIndex4++
+            if(slideIndex4>a.length) {slideIndex4=1}
+            a[slideIndex4 - 1].style.display = "block"
+            setTimeout(carousel4,3000)
+        }
+        var slideIndex5 = 0
+        carousel5()
+        function carousel5(){
+            var i
+            var a = document.getElementsByClassName("myslide2")
+            for(i=0;i<a.length;i++){
+                a[i].style.display = "none"
+            }
+            slideIndex5++
+            if(slideIndex5>a.length) {slideIndex5=1}
+            a[slideIndex5 - 1].style.display = "block"
+            setTimeout(carousel5,2000)
+        }
+        var slideIndex6 = 0
+        carousel6()
+        function carousel6(){
+            var i
+            var a = document.getElementsByClassName("myslide3")
+            for(i=0;i<a.length;i++){
+                a[i].style.display = "none"
+            }
+            slideIndex6++
+            if(slideIndex6>a.length) {slideIndex6=1}
+            a[slideIndex6 - 1].style.display = "block"
+            setTimeout(carousel6,1000)
+        }
+    </script>
+</body>
+</html>
